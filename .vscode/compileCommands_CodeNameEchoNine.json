@@ -1,0 +1,42 @@
+[
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\CodeNameEchoNine.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\CodeNameEchoNine.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\CodeNameEchoNine.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\CodeNameEchoNineGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\CodeNameEchoNineGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	}
+]

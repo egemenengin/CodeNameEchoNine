@@ -1,0 +1,437 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CodeNameEchoNine Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Debug",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Debug",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNine Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Debug",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNine Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Development",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Development",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNine Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Development",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Test",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Test",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNine Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Test",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNine Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNine Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNine",
+				"Win64",
+				"Shipping",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNineEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"Debug",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNineEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"DebugGame",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"CodeNameEchoNineEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		},
+		{
+			"label": "CodeNameEchoNineEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"CodeNameEchoNineEditor",
+				"Win64",
+				"Development",
+				"C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\CodeNameEchoNine.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "C:\\Program Files\\Epic Games\\UE_5.1"
+			}
+		}
+	]
+}
