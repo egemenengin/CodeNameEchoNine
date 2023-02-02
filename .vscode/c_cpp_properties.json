@@ -6,7 +6,7 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "msvc-x64",
-            "compileCommands": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine.json"
+            "compileCommands": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine.json"
         },
         {
             "name": "Win32",
@@ -14,7 +14,7 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "msvc-x64",
-            "compileCommands": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\CodeNameEchoNine\\.vscode\\compileCommands_Default.json"
+            "compileCommands": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_Default.json"
         }
     ],
     "version": 4
