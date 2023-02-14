@@ -12,13 +12,16 @@
 #include "Kismet/GameplayStatics.h"
 
 #include "ShooterInputConfigData.h"
-
+#include "Gun.h"
 
 // Sets default values
 AShooterCharacter::AShooterCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	CurHealth = MaxHealth;
+
 	PlayerSpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Player Spring Arm"));
 	PlayerSpringArm->SetupAttachment(RootComponent);
 
@@ -30,6 +33,14 @@ AShooterCharacter::AShooterCharacter()
 void AShooterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	//Hide gun which is part of skeleton
+	GetMesh()->HideBoneByName(TEXT("weapon_r"), EPhysBodyOp::PBO_None);
+
+	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
+
+	Gun->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+	Gun->SetOwner(this);
 
 }
 
@@ -118,5 +129,25 @@ void AShooterCharacter::JumpHandle(const FInputActionValue& Value)
 void AShooterCharacter::Fire(const FInputActionValue& Value)
 {
 	UE_LOG(LogTemp, Display, TEXT("FIRE"));
+	Gun->PullTrigger();
+
+}
+float AShooterCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float damageApplied = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	damageApplied = FMath::Min(CurHealth, damageApplied);
+	CurHealth -= damageApplied;
+	UE_LOG(LogTemp, Warning, TEXT("Current Health %f"), CurHealth);
+	if(CurHealth <= 0)
+	{
+		IsDead = true;
+	}
+	return damageApplied;
+
 }
 
+
+bool AShooterCharacter::GetIsDead() const
+{
+	return IsDead;
+}

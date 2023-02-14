@@ -7,6 +7,8 @@
 #include "InputActionValue.h"
 #include "ShooterCharacter.generated.h"
 
+class AGun;
+
 UCLASS()
 class CODENAMEECHONINE_API AShooterCharacter : public ACharacter
 {
@@ -27,7 +29,14 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual float TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+	UFUNCTION(BlueprintPure)
+	bool GetIsDead() const;
+
 private:
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* PlayerCam;
 
@@ -38,6 +47,22 @@ private:
 	float MovementSpeed = 100.f;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float RotationSpeed = 10.f;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AGun> GunClass;
+
+	UPROPERTY()
+	AGun* Gun;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Health")
+	float MaxHealth = 100.f;
+
+	UPROPERTY(VisibleAnywhere, Category = "Health")
+	float CurHealth;
+
+	UPROPERTY(VisibleAnywhere)
+	bool IsDead = false;
+
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Enhanced Input System", meta = (AllowPrivateAccess = "true"))
 	class UInputMappingContext* InputMapping;
