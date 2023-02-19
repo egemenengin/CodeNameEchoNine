@@ -39,7 +39,7 @@ private:
 	UParticleSystem* HitFlash;
 
 	UPROPERTY(EditAnyWhere)
-	float Range = 1000;
+	float Range = 5000;
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 25;

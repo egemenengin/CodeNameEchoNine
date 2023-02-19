@@ -1,5 +1,69 @@
 [
 	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTService_LastSeenPlayerLocation.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTService_LastSeenPlayerLocation.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTService_PlayerLocation.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTService_PlayerLocation.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTTask_ClearBlackboardValue.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTTask_ClearBlackboardValue.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTTask_Shoot.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\BTTask_Shoot.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\CodeNameEchoNine.Build.cs",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
@@ -40,6 +104,22 @@
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
 	},
 	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\EnemyCharacter.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\EnemyCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\Gun.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
@@ -49,6 +129,22 @@
 	},
 	{
 		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\Gun.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\ShooterAIController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\Source\\CodeNameEchoNine\\ShooterAIController.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\cl.exe",
 			"@C:\\Users\\egeme\\Desktop\\projects\\UnrealEngine5Projects\\CodeNameEchoNine\\.vscode\\compileCommands_CodeNameEchoNine\\CodeNameEchoNine.255.rsp"

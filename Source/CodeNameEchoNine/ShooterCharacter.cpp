@@ -13,7 +13,7 @@
 
 #include "ShooterInputConfigData.h"
 #include "Gun.h"
-
+#include "Components/CapsuleComponent.h"
 // Sets default values
 AShooterCharacter::AShooterCharacter()
 {
@@ -141,6 +141,8 @@ float AShooterCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Dama
 	if(CurHealth <= 0)
 	{
 		IsDead = true;
+		DetachFromControllerPendingDestroy();
+		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	}
 	return damageApplied;
 

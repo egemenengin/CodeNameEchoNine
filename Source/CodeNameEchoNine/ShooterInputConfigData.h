@@ -16,15 +16,15 @@ class CODENAMEECHONINE_API UShooterInputConfigData : public UDataAsset
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input Actions")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Input)
 	UInputAction* InputMove;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input Actions")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Input)
 	UInputAction* InputLook;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input Actions")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Input)
 	UInputAction* InputFire;
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Input Actions")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Input)
 	UInputAction* InputJump;	
 };
