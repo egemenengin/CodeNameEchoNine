@@ -7,6 +7,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "ShooterAIController.h"
 #include "Components/CapsuleComponent.h"
+
+#include "CodeNameEchoNineGameModeBase.h"
+
 // Sets default values
 AEnemyCharacter::AEnemyCharacter()
 {
@@ -72,6 +75,12 @@ float AEnemyCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damage
 		IsDead = true;
 		DetachFromControllerPendingDestroy();
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+		ACodeNameEchoNineGameModeBase* gameMode = GetWorld()->GetAuthGameMode<ACodeNameEchoNineGameModeBase>();
+		if(gameMode != nullptr)
+		{
+			gameMode->PawnKilled(this);
+		}
 	}
 	return damageApplied;
 

@@ -14,6 +14,8 @@
 #include "ShooterInputConfigData.h"
 #include "Gun.h"
 #include "Components/CapsuleComponent.h"
+
+#include "CodeNameEchoNineGameModeBase.h"
 // Sets default values
 AShooterCharacter::AShooterCharacter()
 {
@@ -141,8 +143,16 @@ float AShooterCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Dama
 	if(CurHealth <= 0)
 	{
 		IsDead = true;
+
+		ACodeNameEchoNineGameModeBase* gameMode = GetWorld()->GetAuthGameMode<ACodeNameEchoNineGameModeBase>();
+		if(gameMode != nullptr)
+		{
+			gameMode->PawnKilled(this);
+		}
+
 		DetachFromControllerPendingDestroy();
 		GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		
 	}
 	return damageApplied;
 

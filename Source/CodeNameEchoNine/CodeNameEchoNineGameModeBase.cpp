@@ -3,3 +3,6 @@
 
 #include "CodeNameEchoNineGameModeBase.h"
 
+void ACodeNameEchoNineGameModeBase::PawnKilled(APawn* KilledPawn)
+{
+}

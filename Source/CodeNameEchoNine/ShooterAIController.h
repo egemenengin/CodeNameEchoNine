@@ -20,6 +20,7 @@ public:
 
 	void SetCheckpoints(FVector firstPoint, FVector secondPoint);
 
+	bool IsDead() const;
 protected:
 	virtual void BeginPlay() override;
 
@@ -30,7 +31,6 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Control", meta =(AllowPrivateAccess = "true"))
 	class UBehaviorTree* AIBehavior;
-
 
 
 };

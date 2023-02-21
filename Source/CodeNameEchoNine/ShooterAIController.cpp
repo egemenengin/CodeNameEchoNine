@@ -4,7 +4,7 @@
 #include "ShooterAIController.h"
 #include "Kismet/GameplayStatics.h"
 #include "BehaviorTree/BlackboardComponent.h"
-
+#include "EnemyCharacter.h"
 
 AShooterAIController::AShooterAIController()
 {
@@ -46,4 +46,14 @@ void AShooterAIController::SetCheckpoints(FVector firstPoint, FVector secondPoin
 {
     GetBlackboardComponent()->SetValueAsVector(TEXT("FirstCheckpoint"), firstPoint);
     GetBlackboardComponent()->SetValueAsVector(TEXT("SecondCheckpoint"), secondPoint);
+}
+
+bool AShooterAIController::IsDead() const
+{
+    AEnemyCharacter* controlledCharacter = Cast<AEnemyCharacter>(GetPawn());
+    if(controlledCharacter != nullptr)
+    {
+        return controlledCharacter->GetIsDead();
+    } 
+    return true;
 }
