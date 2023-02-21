@@ -25,6 +25,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	bool GunTrace(FHitResult &hitResult, FVector &ShotDirection);
+
+	AController* GetOwnerController() const;
 private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
