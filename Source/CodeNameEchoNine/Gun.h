@@ -46,4 +46,10 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 25;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effects", meta = (AllowPrivateAccess = "true"))
+	USoundBase* HitSound;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effects", meta = (AllowPrivateAccess = "true"))
+	USoundBase* MuzzleSound;
 };
