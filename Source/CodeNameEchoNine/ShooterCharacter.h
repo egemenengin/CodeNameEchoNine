@@ -34,7 +34,9 @@ public:
 
 	UFUNCTION(BlueprintPure)
 	bool GetIsDead() const;
-
+	
+	UFUNCTION(BlueprintPure)
+	float GetHealthPercent() const;
 private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))

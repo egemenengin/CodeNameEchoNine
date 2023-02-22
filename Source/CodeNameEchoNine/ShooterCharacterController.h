@@ -17,7 +17,17 @@ class CODENAMEECHONINE_API AShooterCharacterController : public APlayerControlle
 public:
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;	
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 private:
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UUserWidget> GameplayHUDClass;
+	
+	UPROPERTY(VisibleAnywhere)
+	UUserWidget* GameplayHUD;
+
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> LoseScreenClass;
 
