@@ -57,7 +57,7 @@ private:
 	AGun* Gun;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
-	float MaxHealth = 100.f;
+	float MaxHealth;
 
 	UPROPERTY(VisibleAnywhere, Category = "Health")
 	float CurHealth;

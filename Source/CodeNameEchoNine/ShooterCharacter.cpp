@@ -22,7 +22,7 @@ AShooterCharacter::AShooterCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	CurHealth = MaxHealth;
+
 
 	PlayerSpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Player Spring Arm"));
 	PlayerSpringArm->SetupAttachment(RootComponent);
@@ -36,6 +36,8 @@ void AShooterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	CurHealth = MaxHealth;
+	
 	//Hide gun which is part of skeleton
 	GetMesh()->HideBoneByName(TEXT("weapon_r"), EPhysBodyOp::PBO_None);
 
