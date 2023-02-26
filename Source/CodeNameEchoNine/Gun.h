@@ -45,7 +45,7 @@ private:
 	float Range = 5000;
 
 	UPROPERTY(EditAnywhere)
-	float Damage = 25;
+	float Damage;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effects", meta = (AllowPrivateAccess = "true"))
 	USoundBase* HitSound;

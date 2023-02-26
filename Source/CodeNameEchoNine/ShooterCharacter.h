@@ -51,10 +51,13 @@ private:
 	float RotationSpeed = 10.f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<AGun> GunClass;
+	TArray<TSubclassOf<AGun>> GunClasses;
 
 	UPROPERTY()
-	AGun* Gun;
+	TArray<AGun*> Guns;
+
+	int SelectedWeaponIndex = 0;
+	int NumberOfWeapons = 0;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Health")
 	float MaxHealth;
@@ -80,5 +83,7 @@ protected:
 	void JumpHandle(const FInputActionValue& Value);
 	//Handle fire input
 	void Fire(const FInputActionValue& Value);
+	//Handle change weapon
+	void ChangeWeapon(const FInputActionValue& Value);
 
 };

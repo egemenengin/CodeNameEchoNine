@@ -41,10 +41,23 @@ void AShooterCharacter::BeginPlay()
 	//Hide gun which is part of skeleton
 	GetMesh()->HideBoneByName(TEXT("weapon_r"), EPhysBodyOp::PBO_None);
 
-	Gun = GetWorld()->SpawnActor<AGun>(GunClass);
+	SelectedWeaponIndex = 0;
+	NumberOfWeapons = GunClasses.Num();
+	Guns.SetNum(NumberOfWeapons);
+	for(int i = 0; i < NumberOfWeapons; i++)
+	{
+		Guns[i] = GetWorld()->SpawnActor<AGun>(GunClasses[i]);
+		Guns[i]->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
+		Guns[i]->SetOwner(this);
 
-	Gun->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("WeaponSocket"));
-	Gun->SetOwner(this);
+		if(i != SelectedWeaponIndex)
+		{
+			Guns[i]->SetActorHiddenInGame(true);
+			Guns[i]->SetActorEnableCollision(false);
+			Guns[i]->SetActorTickEnabled(false);
+		}
+	}
+	
 
 }
 
@@ -76,7 +89,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	enhancedInputComponent->BindAction(InputActions->InputLook, ETriggerEvent::Triggered, this, &AShooterCharacter::Look);
 	enhancedInputComponent->BindAction(InputActions->InputFire, ETriggerEvent::Started, this, &AShooterCharacter::Fire);
 	enhancedInputComponent->BindAction(InputActions->InputJump, ETriggerEvent::Started, this, &AShooterCharacter::JumpHandle);
-
+	enhancedInputComponent->BindAction(InputActions->InputChangeWeapon,ETriggerEvent::Started, this, &AShooterCharacter::ChangeWeapon);
 }
 
 
@@ -132,10 +145,51 @@ void AShooterCharacter::JumpHandle(const FInputActionValue& Value)
 //Handle fire input
 void AShooterCharacter::Fire(const FInputActionValue& Value)
 {
-	UE_LOG(LogTemp, Display, TEXT("FIRE"));
-	Gun->PullTrigger();
+	Guns[SelectedWeaponIndex]->PullTrigger();
 
 }
+
+void AShooterCharacter::ChangeWeapon(const FInputActionValue& Value)
+{
+
+	Guns[SelectedWeaponIndex]->SetActorHiddenInGame(true);
+	Guns[SelectedWeaponIndex]->SetActorEnableCollision(false);
+	Guns[SelectedWeaponIndex]->SetActorTickEnabled(false);
+
+	float inputValue = Value.Get<float>();
+	
+	if(inputValue < 0)
+	{
+		SelectedWeaponIndex--;
+		if(SelectedWeaponIndex < 0)
+		{
+			SelectedWeaponIndex = 0;
+		}
+		Guns[SelectedWeaponIndex]->SetActorHiddenInGame(false);
+		Guns[SelectedWeaponIndex]->SetActorEnableCollision(true);
+		Guns[SelectedWeaponIndex]->SetActorTickEnabled(true);
+	}
+	else
+	{
+		SelectedWeaponIndex++;
+		if(SelectedWeaponIndex >= NumberOfWeapons)
+		{
+			SelectedWeaponIndex = NumberOfWeapons - 1;
+		}
+		Guns[SelectedWeaponIndex]->SetActorHiddenInGame(false);
+		Guns[SelectedWeaponIndex]->SetActorEnableCollision(true);
+		Guns[SelectedWeaponIndex]->SetActorTickEnabled(true);
+	}
+
+	
+
+
+	
+	
+}
+
+
+
 float AShooterCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float damageApplied = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
