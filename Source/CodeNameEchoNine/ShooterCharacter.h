@@ -37,6 +37,9 @@ public:
 	
 	UFUNCTION(BlueprintPure)
 	float GetHealthPercent() const;
+
+	UFUNCTION(BlueprintPure)
+	AGun* GetCurrentGun() const;
 private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
@@ -85,5 +88,6 @@ protected:
 	void Fire(const FInputActionValue& Value);
 	//Handle change weapon
 	void ChangeWeapon(const FInputActionValue& Value);
-
+	//Handle reload weapon
+	void Reload(const FInputActionValue& Value);
 };

@@ -25,7 +25,7 @@ AGun::AGun()
 void AGun::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	NumberOfAmmoInMag = MagSize;
 }
 
 // Called every frame
@@ -37,26 +37,36 @@ void AGun::Tick(float DeltaTime)
 
 void AGun::PullTrigger()
 {
-//MuzzleFlashSocket
-	UGameplayStatics::SpawnEmitterAttached(MuzzleFlash, Mesh, TEXT("MuzzleFlashSocket") );
-	UGameplayStatics::SpawnSoundAttached(MuzzleSound, Mesh, TEXT("MuzzleFlashSocket") );
-
-	FHitResult HitResult;
-	FVector ShotDirection;
-	if(GunTrace(HitResult, ShotDirection))
+	if(NumberOfAmmoInMag > 0)
 	{
-		//DrawDebugPoint(GetWorld(), HitResult.Location, 20, FColor::Red, true);
-		AActor* HitActor = HitResult.GetActor();
-		if(HitActor != nullptr)
-		{
-			UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitFlash, HitResult.Location, ShotDirection.Rotation());
-			UGameplayStatics::PlaySoundAtLocation(this, HitSound, HitResult.Location, 0.3f);
+		//MuzzleFlashSocket
+		UGameplayStatics::SpawnEmitterAttached(MuzzleFlash, Mesh, TEXT("MuzzleFlashSocket") );
+		UGameplayStatics::SpawnSoundAttached(MuzzleSound, Mesh, TEXT("MuzzleFlashSocket") );
 
-			FPointDamageEvent WeaponDamageEvent(Damage, HitResult, ShotDirection, nullptr);
-			AController* OwnerController = GetOwnerController();	
-			HitActor->TakeDamage(Damage, WeaponDamageEvent, OwnerController, this);
+		FHitResult HitResult;
+		FVector ShotDirection;
+		if(GunTrace(HitResult, ShotDirection))
+		{
+			//DrawDebugPoint(GetWorld(), HitResult.Location, 20, FColor::Red, true);
+			AActor* HitActor = HitResult.GetActor();
+			if(HitActor != nullptr)
+			{
+				UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), HitFlash, HitResult.Location, ShotDirection.Rotation());
+				UGameplayStatics::PlaySoundAtLocation(this, HitSound, HitResult.Location, 0.3f);
+
+				FPointDamageEvent WeaponDamageEvent(Damage, HitResult, ShotDirection, nullptr);
+				AController* OwnerController = GetOwnerController();	
+				HitActor->TakeDamage(Damage, WeaponDamageEvent, OwnerController, this);
+			}
 		}
+		NumberOfAmmoInMag--;
 	}
+	else
+	{
+		UGameplayStatics::SpawnSoundAttached(OutOfAmmoSound, Mesh, TEXT("MuzzleFlashSocket"));
+		//TODO: show reload message on screen
+	}
+
 }
 
 bool AGun::GunTrace(FHitResult &hitResult, FVector &ShotDirection)
@@ -92,4 +102,32 @@ AController *AGun::GetOwnerController() const
 	return OwnerPawn->GetController();
 }
 
+void AGun::ReloadGun()
+{
+	if(TotalAmmo <= 0)
+	{
+		//TODO: show out of ammo message on screen
+	}
+	else if(TotalAmmo < MagSize)
+	{
+		NumberOfAmmoInMag = TotalAmmo;
+		TotalAmmo = 0;
+	}
+	else
+	{
+		TotalAmmo -= MagSize - NumberOfAmmoInMag;
+		NumberOfAmmoInMag = MagSize;
+		
+	}
 
+}
+
+int AGun::GetTotalAmmo()
+{
+    return TotalAmmo;
+}
+
+int AGun::GetNumberOfAmmoInMag()
+{
+	return NumberOfAmmoInMag;
+}

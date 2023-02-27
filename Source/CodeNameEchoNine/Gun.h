@@ -28,6 +28,15 @@ public:
 	bool GunTrace(FHitResult &hitResult, FVector &ShotDirection);
 
 	AController* GetOwnerController() const;
+
+	void ReloadGun();
+
+	UFUNCTION(BlueprintPure)
+	int GetNumberOfAmmoInMag();
+
+	UFUNCTION(BlueprintPure)
+	int GetTotalAmmo();
+	
 private:
 	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
@@ -47,9 +56,21 @@ private:
 	UPROPERTY(EditAnywhere)
 	float Damage;
 
+	UPROPERTY(EditAnyWhere)
+	int TotalAmmo;
+
+	UPROPERTY(EditAnyWhere)
+	int MagSize;
+
+	UPROPERTY(EditAnyWhere)
+	int NumberOfAmmoInMag;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effects", meta = (AllowPrivateAccess = "true"))
 	USoundBase* HitSound;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effects", meta = (AllowPrivateAccess = "true"))
 	USoundBase* MuzzleSound;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Effects", meta = (AllowPrivateAccess = "true"))
+	USoundBase* OutOfAmmoSound;
 };

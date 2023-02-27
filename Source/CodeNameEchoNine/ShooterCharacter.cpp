@@ -90,6 +90,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	enhancedInputComponent->BindAction(InputActions->InputFire, ETriggerEvent::Started, this, &AShooterCharacter::Fire);
 	enhancedInputComponent->BindAction(InputActions->InputJump, ETriggerEvent::Started, this, &AShooterCharacter::JumpHandle);
 	enhancedInputComponent->BindAction(InputActions->InputChangeWeapon,ETriggerEvent::Started, this, &AShooterCharacter::ChangeWeapon);
+	enhancedInputComponent->BindAction(InputActions->InputReload, ETriggerEvent::Started, this, &AShooterCharacter::Reload);
 }
 
 
@@ -145,8 +146,10 @@ void AShooterCharacter::JumpHandle(const FInputActionValue& Value)
 //Handle fire input
 void AShooterCharacter::Fire(const FInputActionValue& Value)
 {
-	Guns[SelectedWeaponIndex]->PullTrigger();
-
+	if(Value.Get<float>() > 0)
+	{
+		Guns[SelectedWeaponIndex]->PullTrigger();
+	}
 }
 
 void AShooterCharacter::ChangeWeapon(const FInputActionValue& Value)
@@ -181,14 +184,11 @@ void AShooterCharacter::ChangeWeapon(const FInputActionValue& Value)
 		Guns[SelectedWeaponIndex]->SetActorTickEnabled(true);
 	}
 
-	
-
-
-	
-	
 }
-
-
+void AShooterCharacter::Reload(const FInputActionValue& Value)
+{
+	Guns[SelectedWeaponIndex]->ReloadGun();
+}
 
 float AShooterCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
@@ -223,4 +223,9 @@ bool AShooterCharacter::GetIsDead() const
 float AShooterCharacter::GetHealthPercent() const
 {
     return CurHealth/MaxHealth;
+}
+
+AGun* AShooterCharacter::GetCurrentGun() const
+{
+    return Guns[SelectedWeaponIndex];
 }
