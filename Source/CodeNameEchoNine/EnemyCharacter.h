@@ -35,13 +35,14 @@ public:
 	bool GetIsDead() const;
 
 	void Fire();
-private:
 
+public: 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	USceneComponent* FirstPoint;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	USceneComponent* SecondPoint;
+private:
 
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))

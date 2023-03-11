@@ -24,7 +24,12 @@ void AShooterAIController::BeginPlay()
 void AShooterAIController::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
-    
+    if(!CheckpointsSaved && GetBlackboardComponent() != nullptr)
+    {
+        GetBlackboardComponent()->SetValueAsVector(FirstCheckpointName, FirstCheckpoint);
+        GetBlackboardComponent()->SetValueAsVector(SecondCheckpointName, SecondCheckpoint);
+        CheckpointsSaved = true;
+    }
    /*
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 
@@ -44,8 +49,8 @@ void AShooterAIController::Tick(float DeltaSeconds)
 }
 void AShooterAIController::SetCheckpoints(FVector firstPoint, FVector secondPoint)
 {
-    GetBlackboardComponent()->SetValueAsVector(TEXT("FirstCheckpoint"), firstPoint);
-    GetBlackboardComponent()->SetValueAsVector(TEXT("SecondCheckpoint"), secondPoint);
+    FirstCheckpoint = firstPoint;
+    SecondCheckpoint = secondPoint;
 }
 
 bool AShooterAIController::IsDead() const

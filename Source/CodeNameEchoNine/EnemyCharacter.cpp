@@ -40,7 +40,7 @@ void AEnemyCharacter::BeginPlay()
 
 	AShooterAIController* EnemyController = GetController<AShooterAIController>();
 
-	if(EnemyController != nullptr)
+	if(ensure(EnemyController != nullptr))
 	{
 		EnemyController->SetCheckpoints(FirstPoint->GetComponentLocation(), SecondPoint->GetComponentLocation());
 	}

@@ -32,5 +32,11 @@ private:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Control", meta =(AllowPrivateAccess = "true"))
 	class UBehaviorTree* AIBehavior;
 
+	FName FirstCheckpointName = TEXT("FirstCheckpoint");
+	FName SecondCheckpointName = TEXT("SecondCheckpoint");
+	FVector FirstCheckpoint;
+	FVector SecondCheckpoint;
+
+	bool CheckpointsSaved = false;
 
 };
